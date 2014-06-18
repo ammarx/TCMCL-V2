@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5357B588-3874-4A2C-A22E-6229DC2DC662}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Launcher.My.MyApplication</StartupObject>
+    <RootNamespace>Launcher</RootNamespace>
+    <AssemblyName>Launcher</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Launcher.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Launcher.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TagCraftMCIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\TagAPI\TagAPI\bin\Debug\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\TagAPI\TagAPI\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="TagAPI">
+      <HintPath>..\..\TagAPI\TagAPI\bin\Debug\TagAPI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildArguments.vb" />
+    <Compile Include="GameLoader.vb" />
+    <Compile Include="CrashReader.Designer.vb">
+      <DependentUpon>CrashReader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CrashReader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewsLoader.vb" />
+    <Compile Include="OldFile.vb" />
+    <Compile Include="ResourcesDownloader.Designer.vb">
+      <DependentUpon>ResourcesDownloader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesDownloader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsReaderWriter.vb" />
+    <Compile Include="TransparentRichTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Credit.Designer.vb">
+      <DependentUpon>Credit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Credit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.vb">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionsWindow.Designer.vb">
+      <DependentUpon>OptionsWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateLauncher.Designer.vb">
+      <DependentUpon>UpdateLauncher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateLauncher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MCUpdateDownloader.Designer.vb">
+      <DependentUpon>MCUpdateDownloader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MCUpdateDownloader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UUIDLoader.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrashReader.resx">
+      <DependentUpon>CrashReader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Credit.resx">
+      <DependentUpon>Credit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourcesDownloader.resx">
+      <DependentUpon>ResourcesDownloader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsWindow.resx">
+      <DependentUpon>OptionsWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateLauncher.resx">
+      <DependentUpon>UpdateLauncher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCUpdateDownloader.resx">
+      <DependentUpon>MCUpdateDownloader.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\minecraft_font.ttf" />
+    <None Include="Resources\offline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unknown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CreditsHover.png" />
+    <None Include="Resources\Credits.png" />
+    <None Include="Resources\SaveOptionsHover.png" />
+    <None Include="Resources\SaveOptions.png" />
+    <None Include="Resources\OptionsArea.png" />
+    <None Include="Resources\Exit_.png" />
+    <None Include="Resources\VisitHover.png" />
+    <None Include="Resources\Visit.png" />
+    <None Include="Resources\OptionsHover.png" />
+    <None Include="Resources\Options.png" />
+    <None Include="Resources\News.png" />
+    <None Include="Resources\Logo.png" />
+    <None Include="Resources\LaunchHover.png" />
+    <None Include="Resources\Launch.png" />
+    <None Include="Resources\HelpandInfoHover.png" />
+    <None Include="Resources\HelpandInfo.png" />
+    <None Include="Resources\ExitHover.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\TextBG2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thanks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountName2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinecraftVersion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RememberAccount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LatestNews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LauncherVersion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OurLauncher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyrightMojang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyrightMojang2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OutOfDate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingNews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnableToLoadNews.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingNewsANI.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadingNewsANIV2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fullbright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Memory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Debug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Promise.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creditsandthanks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thanks1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thanks2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blaze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cyborg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Update.png" />
+    <None Include="Resources\VisitHover1.png" />
+    <None Include="Resources\UpdateHover.png" />
+    <None Include="Resources\0.0.0.png" />
+    <None Include="Resources\NewsBGVAMMAR.jpg" />
+    <None Include="Resources\NewsBGV9.jpg" />
+    <None Include="Resources\AutoUpdaterGUI_Final.jpg" />
+    <None Include="Resources\ModsGUI_Final.jpg" />
+    <None Include="Resources\AdvanceIT.png" />
+    <None Include="Resources\HeldIT.png" />
+    <None Include="Resources\MinecraftPlayerName.png" />
+    <None Include="Resources\RememberAccount1.png" />
+    <None Include="Resources\RememberName.png" />
+    <None Include="Resources\MinecraftUpdates.png" />
+    <None Include="Resources\MinecraftUpdatesHover.png" />
+    <None Include="Resources\ChooseVersion.png" />
+    <None Include="Resources\141.png" />
+    <None Include="Resources\LoadingUUID.png" />
+    <None Include="Resources\DetectedCrash.png" />
+    <None Include="Resources\DetectedCrash2.png" />
+    <None Include="Resources\CrashReportGUI.png" />
+    <None Include="Resources\CrashReportGUI.jpg" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\CloseHover.png" />
+    <None Include="Resources\Version150.png" />
+    <None Include="Resources\152.png" />
+    <Content Include="TagCraftMCIcon.ico" />
+    <None Include="Resources\Version130.png" />
+    <None Include="Resources\InstallModsV2.png" />
+    <None Include="Resources\InstallModsV2Mouse.png" />
+    <None Include="Resources\Mods.png" />
+    <None Include="Resources\ModsHover.png" />
+    <None Include="Resources\InstallModsV2Mouse1.png" />
+    <None Include="Resources\InstallModsV21.png" />
+    <None Include="Resources\CopyrightMojang2014.png" />
+    <None Include="Resources\Version140.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
