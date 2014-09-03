@@ -295,7 +295,7 @@ Partial Class MainMenu
         'Label8
         '
         Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Image = Global.Launcher.My.Resources.Resources.Version152
+        Me.Label8.Image = Global.Launcher.My.Resources.Resources.Version160
         Me.Label8.Location = New System.Drawing.Point(278, 527)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(237, 17)

@@ -345,6 +345,10 @@
     <None Include="Resources\CloseHover.png" />
     <None Include="Resources\Version150.png" />
     <None Include="Resources\152.png" />
+    <None Include="Resources\rebuild.png" />
+    <None Include="Resources\rebuildhover.png" />
+    <None Include="Resources\UUIDSkinMode.png" />
+    <None Include="Resources\Version160.png" />
     <Content Include="TagCraftMCIcon.ico" />
     <None Include="Resources\Version130.png" />
     <None Include="Resources\InstallModsV2.png" />

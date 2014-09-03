@@ -243,6 +243,14 @@ Launcher
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Launcher.My.Resources.Resources.rebuild">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Launcher.My.Resources.Resources.rebuildhover">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Launcher.My.Resources.Resources.RememberAccount">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -299,6 +307,10 @@ Launcher
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Launcher.My.Resources.Resources.UUIDSkinMode">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Launcher.My.Resources.Resources.Version130">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -316,6 +328,10 @@ Launcher
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:Launcher.My.Resources.Resources.Version152">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Launcher.My.Resources.Resources.Version160">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -38,3 +38,21 @@ C:\Users\User\Documents\Visual Studio 2013\Projects\LauncherV2\Launcher\bin\Debu
 C:\Users\User\Documents\Visual Studio 2013\Projects\LauncherV2\Launcher\bin\Debug\Launcher.xml
 C:\Users\User\Documents\Visual Studio 2013\Projects\LauncherV2\Launcher\bin\Debug\TagAPI.pdb
 C:\Users\User\Documents\Visual Studio 2013\Projects\LauncherV2\Launcher\obj\Debug\Launcher.OptionsWindow.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\bin\Debug\Launcher.exe.config
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.exe
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.xml
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.pdb
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\bin\Debug\Launcher.exe
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\bin\Debug\Launcher.pdb
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\bin\Debug\Launcher.xml
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\bin\Debug\TagAPI.pdb
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.vbprojResolveAssemblyReference.cache
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.CrashReader.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.Credit.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.ResourcesDownloader.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.MainMenu.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.OptionsWindow.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.UpdateLauncher.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.Resources.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.MCUpdateDownloader.resources
+C:\Users\Chalkie's\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.vbproj.GenerateResource.Cache

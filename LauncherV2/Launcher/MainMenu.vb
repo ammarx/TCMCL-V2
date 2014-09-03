@@ -20,7 +20,7 @@ Public Class MainMenu
     Public Shared clientversions_URL As String = "http://files.tagcraftmc.com/launcher/clientversions.html"
     Public Shared minecraftnews_URL As String = "http://files.tagcraftmc.com/launcher/minecraftnews.html"
 
-    Public Shared Launcher_Version As String = "version 1.52"
+    Public Shared Launcher_Version As String = "version 1.60"
 
     Public Sub PopulateVersionSelector()
         Dim di As New DirectoryInfo(versionsfolder)
@@ -63,6 +63,18 @@ Public Class MainMenu
     End Sub
 
     Private Sub Launch_Click(sender As Object, e As EventArgs) Handles Launch.Click
+
+        If Username.Text = "" Then
+            MessageBox.Show("To launch Minecraft you must select a player name you wish to play with.", "Please select a Player Name", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+        If VersionSelector.SelectedItem = "" Then
+            MessageBox.Show("To launch Minecraft you must select a version you wish to play.", "Please select a Minecraft Version", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+        End If
+
+
 
         SettingsReaderWriter.getUUIDMode()
         ' UUID Mode is only in get mode because internet connection is required for further data.
@@ -213,6 +225,64 @@ Public Class MainMenu
         MCUpdateDownloader.Show()
 
     End Sub
+    Private Sub Options_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Options.MouseEnter
 
-  
+        Options.BackgroundImage = My.Resources.OptionsHover
+
+    End Sub
+    Private Sub Options_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Options.MouseLeave
+
+        Options.BackgroundImage = My.Resources.Options
+
+    End Sub
+    Private Sub Help_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Help.MouseEnter
+
+        Help.BackgroundImage = My.Resources.HelpandInfoHover
+
+    End Sub
+    Private Sub Help_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Help.MouseLeave
+
+        Help.BackgroundImage = My.Resources.HelpandInfo
+
+    End Sub
+    Private Sub Website_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Website.MouseEnter
+
+        Website.BackgroundImage = My.Resources.VisitHover
+
+    End Sub
+    Private Sub Website_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Website.MouseLeave
+
+        Website.BackgroundImage = My.Resources.Visit
+
+    End Sub
+    Private Sub MCUpdates_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MCUpdates.MouseEnter
+
+        MCUpdates.BackgroundImage = My.Resources.MinecraftUpdatesHover
+
+    End Sub
+    Private Sub MCUpdates_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MCUpdates.MouseLeave
+
+        MCUpdates.BackgroundImage = My.Resources.MinecraftUpdates
+
+    End Sub
+    Private Sub ExitLauncher_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitLauncher.MouseEnter
+
+        ExitLauncher.BackgroundImage = My.Resources.ExitHover
+
+    End Sub
+    Private Sub ExitLauncher_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitLauncher.MouseLeave
+
+        ExitLauncher.BackgroundImage = My.Resources.Exit_
+
+    End Sub
+    Private Sub Launch_MouseEnter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Launch.MouseEnter
+
+        Launch.BackgroundImage = My.Resources.LaunchHover
+
+    End Sub
+    Private Sub Launch_MouseLeave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Launch.MouseLeave
+
+        Launch.BackgroundImage = My.Resources.Launch
+
+    End Sub
 End Class

@@ -345,4 +345,17 @@ Public Class OptionsWindow
         ExitOptions.BackgroundImage = My.Resources.Exit_
 
     End Sub
+    Private Sub RebuildOptions_MouseEnter(sender As Object, e As EventArgs) Handles RebuildOptions.MouseEnter
+        RebuildOptions.BackgroundImage = My.Resources.rebuildhover
+
+    End Sub
+
+    Private Sub RebuildOptions_MouseLeave(sender As Object, e As EventArgs) Handles RebuildOptions.MouseLeave
+        RebuildOptions.BackgroundImage = My.Resources.rebuild
+
+    End Sub
+
+    Private Sub UUIDStatusBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles UUIDStatusBox.SelectedIndexChanged
+
+    End Sub
 End Class

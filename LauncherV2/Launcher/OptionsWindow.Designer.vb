@@ -38,10 +38,10 @@ Partial Class OptionsWindow
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.RebuildOptions = New System.Windows.Forms.Button()
         Me.UUIDStatusBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RebuildOptions = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'FullBright
@@ -148,12 +148,11 @@ Partial Class OptionsWindow
         Me.DebugM.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DebugM.FormattingEnabled = True
         Me.DebugM.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.DebugM.Location = New System.Drawing.Point(308, 246)
+        Me.DebugM.Location = New System.Drawing.Point(308, 239)
         Me.DebugM.Name = "DebugM"
         Me.DebugM.Size = New System.Drawing.Size(94, 21)
         Me.DebugM.TabIndex = 19
         Me.OptionsToolTip.SetToolTip(Me.DebugM, "Makes minecraft run in debug mode. This can help ")
-        Me.DebugM.Visible = False
         '
         'Memory
         '
@@ -184,12 +183,11 @@ Partial Class OptionsWindow
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Image = Global.Launcher.My.Resources.Resources.Debug
-        Me.Label5.Location = New System.Drawing.Point(2, 249)
+        Me.Label5.Location = New System.Drawing.Point(2, 239)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(136, 17)
+        Me.Label5.Size = New System.Drawing.Size(130, 17)
         Me.Label5.TabIndex = 14
         Me.OptionsToolTip.SetToolTip(Me.Label5, "Makes minecraft run in debug mode. This can help " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "when looking for errors.")
-        Me.Label5.Visible = False
         '
         'Label4
         '
@@ -211,26 +209,6 @@ Partial Class OptionsWindow
         Me.Label6.TabIndex = 17
         Me.OptionsToolTip.SetToolTip(Me.Label6, "Allows you to see held items ID's and damage values.")
         '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
-        Me.Label3.Location = New System.Drawing.Point(148, 36)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 30)
-        Me.Label3.TabIndex = 11
-        '
-        'RebuildOptions
-        '
-        Me.RebuildOptions.Location = New System.Drawing.Point(109, 311)
-        Me.RebuildOptions.Name = "RebuildOptions"
-        Me.RebuildOptions.Size = New System.Drawing.Size(196, 37)
-        Me.RebuildOptions.TabIndex = 22
-        Me.RebuildOptions.Text = "Rebuild Options"
-        Me.RebuildOptions.UseVisualStyleBackColor = True
-        '
         'UUIDStatusBox
         '
         Me.UUIDStatusBox.AllowDrop = True
@@ -246,12 +224,37 @@ Partial Class OptionsWindow
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(8, 216)
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Image = Global.Launcher.My.Resources.Resources.UUIDSkinMode
+        Me.Label7.Location = New System.Drawing.Point(5, 212)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(88, 13)
+        Me.Label7.Size = New System.Drawing.Size(147, 22)
         Me.Label7.TabIndex = 25
-        Me.Label7.Text = "UUID Skin Mode"
+        Me.OptionsToolTip.SetToolTip(Me.Label7, "Should allow you to see your own skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will increase upto 5 second" & _
+        "s.")
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
+        Me.Label3.Location = New System.Drawing.Point(148, 36)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 30)
+        Me.Label3.TabIndex = 11
+        '
+        'RebuildOptions
+        '
+        Me.RebuildOptions.BackgroundImage = Global.Launcher.My.Resources.Resources.rebuild
+        Me.RebuildOptions.FlatAppearance.BorderSize = 0
+        Me.RebuildOptions.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.RebuildOptions.Location = New System.Drawing.Point(109, 311)
+        Me.RebuildOptions.Name = "RebuildOptions"
+        Me.RebuildOptions.Size = New System.Drawing.Size(196, 40)
+        Me.RebuildOptions.TabIndex = 22
+        Me.OptionsToolTip.SetToolTip(Me.RebuildOptions, "Allows you to rebuild broken Options")
+        Me.RebuildOptions.UseVisualStyleBackColor = True
         '
         'OptionsWindow
         '
@@ -283,7 +286,6 @@ Partial Class OptionsWindow
         Me.Name = "OptionsWindow"
         Me.Text = "Minecraft Launcher Options"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents FullBright As System.Windows.Forms.ComboBox
