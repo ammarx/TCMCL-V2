@@ -22,7 +22,7 @@ Public Class MCUpdateDownloader
     Private Sub cbversions_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbversions.SelectedIndexChanged
         Try
             selectedversion = cbversions.SelectedItem.ToString
-            VersionPicture.ImageLocation = "http://files.tagcraftmc.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
+            VersionPicture.ImageLocation = "http://files.tagcraftnetwork.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
             UpdateVersionBox_BGWorker.RunWorkerAsync()
 
         Catch ex As Exception
@@ -32,7 +32,7 @@ Public Class MCUpdateDownloader
 
     Private Sub cbversions_MouseHover(sender As Object, e As EventArgs) Handles cbversions.MouseHover
         Try
-            VersionPicture.ImageLocation = "http://files.tagcraftmc.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
+            VersionPicture.ImageLocation = "http://files.tagcraftnetwork.com/launcher/images/" + cbversions.SelectedItem.ToString + ".png"
 
         Catch ex As Exception
             'unable to load the image
@@ -42,7 +42,7 @@ Public Class MCUpdateDownloader
 
     Private Sub btnstart_Click(sender As Object, e As EventArgs) Handles btnstart.Click
         Try
-            WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/minecraft/" + cbversions.SelectedItem.ToString + ".zip"), "MinecraftUpdate.zip")
+            WC.DownloadFileAsync(New Uri("http://files.tagcraftnetwork.com/launcher/minecraft/" + cbversions.SelectedItem.ToString + ".zip"), "MinecraftUpdate.zip")
             btnstart.Text = "Downloading"
             btnstart.Enabled = False
             btncancel.Enabled = True
@@ -149,7 +149,7 @@ Public Class MCUpdateDownloader
     Private Sub FetchDataFromServer_BGWorker_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles FetchDataFromServer_BGWorker.DoWork
         Try
 
-            reader = New StreamReader(client.OpenRead("http://files.tagcraftmc.com/launcher/minecraftversions.html?t=" + DateTime.Now.ToLocalTime()))
+            reader = New StreamReader(client.OpenRead("http://files.tagcraftnetwork.com/launcher/minecraftversions.html?t=" + DateTime.Now.ToLocalTime()))
 
         Catch ex As Exception
 
@@ -195,7 +195,7 @@ Public Class MCUpdateDownloader
     Public Sub updateversioninfo()
         Dim client As WebClient = New WebClient()
         Try
-            Dim URL As String = "http://files.tagcraftmc.com/launcher/info/" + selectedversion + ".html?t=" + DateTime.Now.ToLocalTime()
+            Dim URL As String = "http://files.tagcraftnetwork.com/launcher/info/" + selectedversion + ".html?t=" + DateTime.Now.ToLocalTime()
             versioninfo = client.DownloadString(URL).Replace("\red0\green0\blue0", "\red255\green255\blue255")
 
         Catch ex As Exception

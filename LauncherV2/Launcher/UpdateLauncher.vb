@@ -40,7 +40,7 @@ Public Class UpdateLauncher
     Public Sub updatetext()
         Dim client As WebClient = New WebClient()
         Try
-            Dim URL As String = "http://files.tagcraftmc.com/launcher/clientversioninfo.html?t=" + DateTime.Now.ToLocalTime()
+            Dim URL As String = "http://files.tagcraftnetwork.com/launcher/clientversioninfo.html?t=" + DateTime.Now.ToLocalTime()
             changelogforupdates = client.DownloadString(URL).Replace("\red0\green0\blue0", "\red255\green255\blue255")
 
         Catch ex As Exception
@@ -51,7 +51,7 @@ Public Class UpdateLauncher
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             MainMenu.Enabled = False
-            WC.DownloadFileAsync(New Uri("http://files.tagcraftmc.com/launcher/client/latest.zip"), "ClientUpdate.zip")
+            WC.DownloadFileAsync(New Uri("http://files.tagcraftnetwork.com/launcher/client/latest.zip"), "ClientUpdate.zip")
             ProgressBar1.Visible = True
             Button1.Enabled = False
             Button2.Enabled = False
@@ -137,7 +137,7 @@ Public Class UpdateLauncher
 
         Else
             Try
-                URL = "http://files.tagcraftmc.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime()
+                URL = "http://files.tagcraftnetwork.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime()
                 result = (LCase(client.DownloadString(URL)))
                 'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
                 If (LCase(MainMenu.Launcher_Version) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
@@ -164,7 +164,7 @@ Public Class UpdateLauncher
     End Sub
 
     Private Function InternetConnection() As Boolean
-        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.tagcraftmc.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime())
+        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.tagcraftnetwork.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime())
         Dim resp As System.Net.WebResponse
         Try
             resp = req.GetResponse()

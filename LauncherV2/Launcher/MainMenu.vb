@@ -17,8 +17,8 @@ Public Class MainMenu
     Public Shared XML_UUID As String
 
     Public Shared MojangUUID_API_URL As String = "https://api.mojang.com/profiles/minecraft"
-    Public Shared clientversions_URL As String = "http://files.tagcraftmc.com/launcher/clientversions.html"
-    Public Shared minecraftnews_URL As String = "http://files.tagcraftmc.com/launcher/minecraftnews.html"
+    Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions.html"
+    Public Shared minecraftnews_URL As String = "http://files.tagcraftnetwork.com/launcher/minecraftnews.html"
 
     Public Shared Launcher_Version As String = "version 1.60"
 
