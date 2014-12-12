@@ -14,6 +14,17 @@
     Public Shared UUID As String
     Public Shared AccessToken As String
     Public Shared UUIDMode As Boolean
+    Public Shared UserDefinedUUID As String
+
+    Public Shared Sub getUserDefinedUUID()
+        UserDefinedUUID = My.Settings.UserDefinedUUID
+
+    End Sub
+
+    Public Shared Sub setUserDefinedUUID()
+        My.Settings.UserDefinedUUID = UserDefinedUUID
+
+    End Sub
 
     Public Shared Sub getusername()
         username = My.Settings.username

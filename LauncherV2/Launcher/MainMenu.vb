@@ -170,6 +170,14 @@ Public Class MainMenu
     End Sub
 
     Private Sub Launch_Click(sender As Object, e As EventArgs) Handles Launch.Click
+        Launch.Enabled = False
+        Options.Enabled = False
+        Website.Enabled = False
+        Help.Enabled = False
+        MCUpdates.Enabled = False
+        Username.Enabled = False
+        VersionSelector.Enabled = False
+
 
         'Create folders... failsafe.
         CreateTCMC_Folder()
@@ -193,6 +201,8 @@ Public Class MainMenu
 
 
         SettingsReaderWriter.getUUIDMode()
+        SettingsReaderWriter.getUserDefinedUUID()
+
         ' UUID Mode is only in get mode because internet connection is required for further data.
         SettingsReaderWriter.username = Username.Text
         SettingsReaderWriter.versionnumber = VersionSelector.Text
@@ -207,7 +217,7 @@ Public Class MainMenu
 
         SettingsReaderWriter.SaveSettings()
         '----------------------------Start Minecraft-------------------------
-
+        
         BGWorker_Launch.RunWorkerAsync()
 
     End Sub
@@ -234,23 +244,32 @@ Public Class MainMenu
 
     Private Sub BGWorker_Launch_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGWorker_Launch.DoWork
         Try
-            If SettingsReaderWriter.UUIDMode = False Then
-                SettingsReaderWriter.UUID = "OFFLINE_MODE_UUID"
+            If SettingsReaderWriter.UserDefinedUUID.Trim = vbNullString Then
+
+                If SettingsReaderWriter.UUIDMode = False Then
+                    SettingsReaderWriter.UUID = "OFFLINE_MODE_UUID"
+                    SettingsReaderWriter.setUUID()
+
+                    SettingsReaderWriter.SaveSettings()
+
+                End If
+                If SettingsReaderWriter.UUIDMode = True Then
+                    UUIDLoader.GetUUIDFromServer()
+                    UUIDLoader.Convert_responseFromServer_For_UUID_To_XML()
+                    UUIDLoader.Get_UUID_From_XML()
+
+                    SettingsReaderWriter.setUUID()
+                    SettingsReaderWriter.SaveSettings()
+
+                End If
+
+            Else
+                SettingsReaderWriter.UUID = SettingsReaderWriter.UserDefinedUUID
                 SettingsReaderWriter.setUUID()
 
                 SettingsReaderWriter.SaveSettings()
 
             End If
-            If SettingsReaderWriter.UUIDMode = True Then
-                UUIDLoader.GetUUIDFromServer()
-                UUIDLoader.Convert_responseFromServer_For_UUID_To_XML()
-                UUIDLoader.Get_UUID_From_XML()
-
-                SettingsReaderWriter.setUUID()
-                SettingsReaderWriter.SaveSettings()
-
-            End If
-
         Catch ex As Exception
             SettingsReaderWriter.UUID = "OFFLINE_MODE_UUID"
             SettingsReaderWriter.setUUID()
@@ -264,8 +283,8 @@ Public Class MainMenu
         Try
             FinalArgumentBuilder()
             WriteArgumentToText()
-            ResourcesDownloader.ReadJsonForURL()
-
+            'ResourcesDownloader.ReadJsonForURL()
+            'going to disable this... too much trouble.
 
         Catch ex As Exception
             MsgBox(Environment.StackTrace)

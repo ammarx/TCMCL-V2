@@ -233,6 +233,18 @@ Namespace My
                 Me("UUIDMode") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property UserDefinedUUID() As String
+            Get
+                Return CType(Me("UserDefinedUUID"),String)
+            End Get
+            Set
+                Me("UserDefinedUUID") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

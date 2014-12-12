@@ -40,8 +40,10 @@ Partial Class OptionsWindow
         Me.Label6 = New System.Windows.Forms.Label()
         Me.UUIDStatusBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.RebuildOptions = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.UserD_UUID = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'FullBright
@@ -51,9 +53,9 @@ Partial Class OptionsWindow
         Me.FullBright.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FullBright.FormattingEnabled = True
         Me.FullBright.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.FullBright.Location = New System.Drawing.Point(308, 158)
+        Me.FullBright.Location = New System.Drawing.Point(295, 158)
         Me.FullBright.Name = "FullBright"
-        Me.FullBright.Size = New System.Drawing.Size(94, 21)
+        Me.FullBright.Size = New System.Drawing.Size(107, 21)
         Me.FullBright.TabIndex = 0
         Me.OptionsToolTip.SetToolTip(Me.FullBright, "Allows you to enable Full bright.")
         '
@@ -122,9 +124,9 @@ Partial Class OptionsWindow
         Me.AdvItmToolTips.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AdvItmToolTips.FormattingEnabled = True
         Me.AdvItmToolTips.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.AdvItmToolTips.Location = New System.Drawing.Point(308, 104)
+        Me.AdvItmToolTips.Location = New System.Drawing.Point(295, 104)
         Me.AdvItmToolTips.Name = "AdvItmToolTips"
-        Me.AdvItmToolTips.Size = New System.Drawing.Size(94, 21)
+        Me.AdvItmToolTips.Size = New System.Drawing.Size(107, 21)
         Me.AdvItmToolTips.TabIndex = 16
         Me.OptionsToolTip.SetToolTip(Me.AdvItmToolTips, "Allows you to see all items ID's and damage values.")
         '
@@ -135,9 +137,9 @@ Partial Class OptionsWindow
         Me.HldItmToolTips.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.HldItmToolTips.FormattingEnabled = True
         Me.HldItmToolTips.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.HldItmToolTips.Location = New System.Drawing.Point(308, 131)
+        Me.HldItmToolTips.Location = New System.Drawing.Point(295, 131)
         Me.HldItmToolTips.Name = "HldItmToolTips"
-        Me.HldItmToolTips.Size = New System.Drawing.Size(94, 21)
+        Me.HldItmToolTips.Size = New System.Drawing.Size(107, 21)
         Me.HldItmToolTips.TabIndex = 18
         Me.OptionsToolTip.SetToolTip(Me.HldItmToolTips, "Allows you to see held items ID's and damage values.")
         '
@@ -148,9 +150,9 @@ Partial Class OptionsWindow
         Me.DebugM.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DebugM.FormattingEnabled = True
         Me.DebugM.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.DebugM.Location = New System.Drawing.Point(308, 239)
+        Me.DebugM.Location = New System.Drawing.Point(295, 239)
         Me.DebugM.Name = "DebugM"
-        Me.DebugM.Size = New System.Drawing.Size(94, 21)
+        Me.DebugM.Size = New System.Drawing.Size(107, 21)
         Me.DebugM.TabIndex = 19
         Me.OptionsToolTip.SetToolTip(Me.DebugM, "Makes minecraft run in debug mode. This can help ")
         '
@@ -161,9 +163,9 @@ Partial Class OptionsWindow
         Me.Memory.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Memory.FormattingEnabled = True
         Me.Memory.Items.AddRange(New Object() {"512M", "1024M", "1536M", "2048M", "3072M", "4096M", "6144M", "5120M", "7168M", "8192M"})
-        Me.Memory.Location = New System.Drawing.Point(308, 185)
+        Me.Memory.Location = New System.Drawing.Point(295, 185)
         Me.Memory.Name = "Memory"
-        Me.Memory.Size = New System.Drawing.Size(94, 21)
+        Me.Memory.Size = New System.Drawing.Size(107, 21)
         Me.Memory.TabIndex = 21
         Me.OptionsToolTip.SetToolTip(Me.Memory, "Allows you to change how much memory you")
         '
@@ -216,9 +218,9 @@ Partial Class OptionsWindow
         Me.UUIDStatusBox.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.UUIDStatusBox.FormattingEnabled = True
         Me.UUIDStatusBox.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.UUIDStatusBox.Location = New System.Drawing.Point(308, 212)
+        Me.UUIDStatusBox.Location = New System.Drawing.Point(295, 212)
         Me.UUIDStatusBox.Name = "UUIDStatusBox"
-        Me.UUIDStatusBox.Size = New System.Drawing.Size(94, 21)
+        Me.UUIDStatusBox.Size = New System.Drawing.Size(107, 21)
         Me.UUIDStatusBox.TabIndex = 24
         Me.OptionsToolTip.SetToolTip(Me.UUIDStatusBox, "Allows you to change how much memory you")
         '
@@ -233,17 +235,6 @@ Partial Class OptionsWindow
         Me.OptionsToolTip.SetToolTip(Me.Label7, "Should allow you to see your own skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will increase upto 5 second" & _
         "s.")
         '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
-        Me.Label3.Location = New System.Drawing.Point(148, 36)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 30)
-        Me.Label3.TabIndex = 11
-        '
         'RebuildOptions
         '
         Me.RebuildOptions.BackgroundImage = Global.Launcher.My.Resources.Resources.rebuild
@@ -256,6 +247,33 @@ Partial Class OptionsWindow
         Me.OptionsToolTip.SetToolTip(Me.RebuildOptions, "Allows you to rebuild broken Options")
         Me.RebuildOptions.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
+        Me.Label3.Location = New System.Drawing.Point(148, 36)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 30)
+        Me.Label3.TabIndex = 11
+        '
+        'UserD_UUID
+        '
+        Me.UserD_UUID.Location = New System.Drawing.Point(295, 267)
+        Me.UserD_UUID.Name = "UserD_UUID"
+        Me.UserD_UUID.Size = New System.Drawing.Size(107, 20)
+        Me.UserD_UUID.TabIndex = 26
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(12, 270)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(102, 13)
+        Me.Label8.TabIndex = 27
+        Me.Label8.Text = "User Defined UUID:"
+        '
         'OptionsWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -263,6 +281,8 @@ Partial Class OptionsWindow
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.ClientSize = New System.Drawing.Size(414, 466)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.UserD_UUID)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.UUIDStatusBox)
         Me.Controls.Add(Me.RebuildOptions)
@@ -286,6 +306,7 @@ Partial Class OptionsWindow
         Me.Name = "OptionsWindow"
         Me.Text = "Minecraft Launcher Options"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents FullBright As System.Windows.Forms.ComboBox
@@ -306,4 +327,6 @@ Partial Class OptionsWindow
     Friend WithEvents RebuildOptions As System.Windows.Forms.Button
     Friend WithEvents UUIDStatusBox As System.Windows.Forms.ComboBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents UserD_UUID As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class

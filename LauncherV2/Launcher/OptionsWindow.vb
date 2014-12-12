@@ -205,6 +205,8 @@ Public Class OptionsWindow
         SettingsReaderWriter.getdebugmode()
         SettingsReaderWriter.getmemory()
         SettingsReaderWriter.getUUIDMode()
+        SettingsReaderWriter.getUserDefinedUUID()
+
 
         If SettingsReaderWriter.debugmode = True Then
             DebugM.Text = "Enabled"
@@ -221,6 +223,8 @@ Public Class OptionsWindow
         If SettingsReaderWriter.UUIDMode = False Then
             UUIDStatusBox.Text = "Disabled"
         End If
+
+        UserD_UUID.Text = SettingsReaderWriter.UserDefinedUUID
 
     End Sub
 
@@ -239,13 +243,12 @@ Public Class OptionsWindow
             SettingsReaderWriter.UUIDMode = False
         End If
 
-
+        SettingsReaderWriter.UserDefinedUUID = UserD_UUID.Text
         SettingsReaderWriter.memory = Memory.Text
-
         SettingsReaderWriter.setdebugmode()
         SettingsReaderWriter.setUUIDMode()
         SettingsReaderWriter.setmemory()
-
+        SettingsReaderWriter.setUserDefinedUUID()
         SettingsReaderWriter.SaveSettings()
 
     End Sub
@@ -271,6 +274,7 @@ Public Class OptionsWindow
         HldItmToolTips.Text = "Disabled"
         FullBright.Text = "Disabled"
         UUIDStatusBox.Text = "Disabled"
+        UserD_UUID.Text = ""
         '----------------------------default values end--------------------------
 
         ReadLauncherOptions()
@@ -352,10 +356,6 @@ Public Class OptionsWindow
 
     Private Sub RebuildOptions_MouseLeave(sender As Object, e As EventArgs) Handles RebuildOptions.MouseLeave
         RebuildOptions.BackgroundImage = My.Resources.rebuild
-
-    End Sub
-
-    Private Sub UUIDStatusBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles UUIDStatusBox.SelectedIndexChanged
 
     End Sub
 End Class
