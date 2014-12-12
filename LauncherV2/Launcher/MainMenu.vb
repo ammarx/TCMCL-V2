@@ -170,15 +170,7 @@ Public Class MainMenu
     End Sub
 
     Private Sub Launch_Click(sender As Object, e As EventArgs) Handles Launch.Click
-        Launch.Enabled = False
-        Options.Enabled = False
-        Website.Enabled = False
-        Help.Enabled = False
-        MCUpdates.Enabled = False
-        Username.Enabled = False
-        VersionSelector.Enabled = False
-
-
+        
         'Create folders... failsafe.
         CreateTCMC_Folder()
         CreateTCMC_Folder_Arguments()
@@ -190,15 +182,21 @@ Public Class MainMenu
 
         If Username.Text = "" Then
             MessageBox.Show("To launch Minecraft you must select a player name you wish to play with.", "Please select a Player Name", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Return
+            Exit Sub
         End If
 
         If VersionSelector.SelectedItem = "" Then
             MessageBox.Show("To launch Minecraft you must select a version you wish to play.", "Please select a Minecraft Version", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Return
+            Exit Sub
         End If
 
-
+        Launch.Enabled = False
+        Options.Enabled = False
+        Website.Enabled = False
+        Help.Enabled = False
+        MCUpdates.Enabled = False
+        Username.Enabled = False
+        VersionSelector.Enabled = False
 
         SettingsReaderWriter.getUUIDMode()
         SettingsReaderWriter.getUserDefinedUUID()
