@@ -1,5 +1,6 @@
 ﻿Imports System.Net
 Imports Ionic.Zip
+Imports System.IO
 
 Public Class UpdateLauncher
     Dim changelogforupdates As String
@@ -16,7 +17,7 @@ Public Class UpdateLauncher
 
 
     Private Sub UpdateLauncher_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Label2.Text = Me.Result
+        Label2.Text = Me.result
         BackgroundWorker1.RunWorkerAsync()
     End Sub
 
@@ -126,6 +127,13 @@ Public Class UpdateLauncher
 
                 My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Arguments\Launch.exe", "Launch.old.exe")
 
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            'delete Local_TagCraftMC folder.
+            Try
+                File.Delete(MainMenu.Local_TagCraftMC)
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try

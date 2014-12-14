@@ -13,6 +13,7 @@ Public Class MainMenu
     Public Shared Launch_jar As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + """/.minecraft/TagCraftMC Files/Arguments/Launch.jar"""
     Public Shared Launch_exe As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Arguments/Launch.exe"
     Public Shared TCMC_FILES As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/"
+    Public Shared Local_TagCraftMC As String = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/TagCraftMC/"
 
     Public Shared responseFromServer_For_UUID As String
     Public Shared XML_UUID As String
