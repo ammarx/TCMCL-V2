@@ -224,7 +224,7 @@ Partial Class OptionsWindow
         Me.UUIDStatusBox.Name = "UUIDStatusBox"
         Me.UUIDStatusBox.Size = New System.Drawing.Size(107, 21)
         Me.UUIDStatusBox.TabIndex = 24
-        Me.OptionsToolTip.SetToolTip(Me.UUIDStatusBox, "Allows you to change how much memory you")
+        Me.OptionsToolTip.SetToolTip(Me.UUIDStatusBox, "Allows you to enable your skin.")
         '
         'Label7
         '
@@ -266,6 +266,8 @@ Partial Class OptionsWindow
         Me.UserD_UUID.Name = "UserD_UUID"
         Me.UserD_UUID.Size = New System.Drawing.Size(107, 20)
         Me.UserD_UUID.TabIndex = 26
+        Me.OptionsToolTip.SetToolTip(Me.UserD_UUID, "Allows your to have someone elses skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can get UUID of users from: http://m" & _
+        "cuuid.net/")
         '
         'Label8
         '
@@ -275,6 +277,8 @@ Partial Class OptionsWindow
         Me.Label8.Size = New System.Drawing.Size(102, 13)
         Me.Label8.TabIndex = 27
         Me.Label8.Text = "User Defined UUID:"
+        Me.OptionsToolTip.SetToolTip(Me.Label8, "Allows your to have someone elses skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will remain same." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can" & _
+        " get UUID of users from: http://mcuuid.net/")
         '
         'OptionsWindow
         '
