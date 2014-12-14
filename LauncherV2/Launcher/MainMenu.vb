@@ -419,4 +419,14 @@ Public Class MainMenu
         Launch.BackgroundImage = My.Resources.Launch
 
     End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+        If RememberMe.Checked = True Then
+            RememberMe.Checked = False
+        ElseIf RememberMe.Checked = False Then
+            RememberMe.Checked = True
+
+        End If
+
+    End Sub
 End Class
