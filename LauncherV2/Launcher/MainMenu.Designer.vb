@@ -121,8 +121,8 @@ Partial Class MainMenu
         Me.Options.Name = "Options"
         Me.Options.Size = New System.Drawing.Size(196, 40)
         Me.Options.TabIndex = 2
-        Me.LauncherToolTip.SetToolTip(Me.Options, "Options for the following" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "In game tooltips." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Full Bright." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Memory Allocation." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "D" & _
-        "ebug Mode.")
+        Me.LauncherToolTip.SetToolTip(Me.Options, "Options for the following" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "In game tooltips." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Full Bright." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Memory Allocation." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "U" & _
+        "UID Skin Mode.")
         Me.Options.UseVisualStyleBackColor = False
         '
         'ExitLauncher

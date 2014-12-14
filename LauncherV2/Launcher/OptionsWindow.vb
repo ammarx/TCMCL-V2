@@ -317,6 +317,21 @@ Public Class OptionsWindow
 
     End Sub
 
+    Private Sub CutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CutToolStripMenuItem.Click
+        UserD_UUID.Cut()
+
+    End Sub
+
+    Private Sub CopyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CopyToolStripMenuItem.Click
+        UserD_UUID.Copy()
+
+    End Sub
+
+    Private Sub PasteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PasteToolStripMenuItem.Click
+        UserD_UUID.Paste()
+
+    End Sub
+
     '----------------------------------GUI Stuff Starts Here---------------------------------
 
 

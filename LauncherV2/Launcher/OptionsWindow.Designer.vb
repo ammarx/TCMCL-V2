@@ -41,9 +41,14 @@ Partial Class OptionsWindow
         Me.UUIDStatusBox = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.RebuildOptions = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.UserD_UUID = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'FullBright
@@ -249,19 +254,9 @@ Partial Class OptionsWindow
         Me.OptionsToolTip.SetToolTip(Me.RebuildOptions, "Allows you to rebuild broken Options")
         Me.RebuildOptions.UseVisualStyleBackColor = True
         '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
-        Me.Label3.Location = New System.Drawing.Point(148, 36)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 30)
-        Me.Label3.TabIndex = 11
-        '
         'UserD_UUID
         '
+        Me.UserD_UUID.ContextMenuStrip = Me.ContextMenuStrip1
         Me.UserD_UUID.Location = New System.Drawing.Point(295, 239)
         Me.UserD_UUID.Name = "UserD_UUID"
         Me.UserD_UUID.Size = New System.Drawing.Size(107, 20)
@@ -279,6 +274,43 @@ Partial Class OptionsWindow
         Me.Label8.Text = "User Defined UUID:"
         Me.OptionsToolTip.SetToolTip(Me.Label8, "Allows your to have someone elses skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will remain same." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can" & _
         " get UUID of users from: http://mcuuid.net/")
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
+        Me.Label3.Location = New System.Drawing.Point(148, 36)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 30)
+        Me.Label3.TabIndex = 11
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CutToolStripMenuItem, Me.CopyToolStripMenuItem, Me.PasteToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
+        Me.ContextMenuStrip1.ShowImageMargin = False
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(78, 70)
+        '
+        'CutToolStripMenuItem
+        '
+        Me.CutToolStripMenuItem.Name = "CutToolStripMenuItem"
+        Me.CutToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.CutToolStripMenuItem.Text = "Cut"
+        '
+        'CopyToolStripMenuItem
+        '
+        Me.CopyToolStripMenuItem.Name = "CopyToolStripMenuItem"
+        Me.CopyToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.CopyToolStripMenuItem.Text = "Copy"
+        '
+        'PasteToolStripMenuItem
+        '
+        Me.PasteToolStripMenuItem.Name = "PasteToolStripMenuItem"
+        Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.PasteToolStripMenuItem.Text = "Paste"
         '
         'OptionsWindow
         '
@@ -311,6 +343,7 @@ Partial Class OptionsWindow
         Me.MaximizeBox = False
         Me.Name = "OptionsWindow"
         Me.Text = "Minecraft Launcher Options"
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -335,4 +368,8 @@ Partial Class OptionsWindow
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents UserD_UUID As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents CutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
