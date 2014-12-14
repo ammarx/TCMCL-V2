@@ -153,9 +153,15 @@ Public Class MainMenu
         SettingsReaderWriter.getruntimecatch()
         SettingsReaderWriter.getAccessToken()
 
-        Username.Text = SettingsReaderWriter.username
+
         VersionSelector.Text = SettingsReaderWriter.versionnumber
         RememberMe.Checked = SettingsReaderWriter.rememberaccount
+
+        If RememberMe.Checked = True Then
+            Username.Text = SettingsReaderWriter.username
+        ElseIf RememberMe.Checked = False Then
+            'dont show ma name..
+        End If
 
         Counter_Advert_Loader()
 
