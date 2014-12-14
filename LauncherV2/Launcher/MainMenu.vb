@@ -176,8 +176,15 @@ Public Class MainMenu
 
     End Sub
 
-    Private Sub Launch_Click(sender As Object, e As EventArgs) Handles Launch.Click
-        
+    Private Sub Username_KeyDown(sender As Object, e As KeyEventArgs) Handles Username.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            Start_Launch()
+        End If
+
+    End Sub
+
+    Public Sub Start_Launch()
+
         'Create folders... failsafe.
         CreateTCMC_Folder()
         CreateTCMC_Folder_Arguments()
@@ -222,9 +229,14 @@ Public Class MainMenu
 
         SettingsReaderWriter.SaveSettings()
         '----------------------------Start Minecraft-------------------------
-        
+
         BGWorker_Launch.RunWorkerAsync()
 
+    End Sub
+
+    Private Sub Launch_Click(sender As Object, e As EventArgs) Handles Launch.Click
+        Start_Launch()
+       
     End Sub
 
     Private Sub Options_Click(sender As Object, e As EventArgs) Handles Options.Click
