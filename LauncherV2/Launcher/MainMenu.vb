@@ -10,7 +10,7 @@ Public Class MainMenu
     Public Shared arguments_txt As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Arguments/Arguments.txt"
     Public Shared arguments_launch_txt As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Arguments/Arguments_launch.txt"
     Public Shared crashreportfolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/crash-reports"
-    Public Shared Launch_jar As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + """/.minecraft/TagCraftMC Files/Arguments/Launch.jar"""
+    'Public Shared Launch_jar As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + """/.minecraft/TagCraftMC Files/Arguments/Launch.jar"""
     Public Shared Launch_exe As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Arguments/Launch.exe"
     Public Shared TCMC_FILES As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/"
     Public Shared Local_TagCraftMC As String = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "/TagCraftMC/"

@@ -150,11 +150,12 @@ Partial Class OptionsWindow
         Me.DebugM.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DebugM.FormattingEnabled = True
         Me.DebugM.Items.AddRange(New Object() {"Enabled", "Disabled"})
-        Me.DebugM.Location = New System.Drawing.Point(295, 239)
+        Me.DebugM.Location = New System.Drawing.Point(295, 265)
         Me.DebugM.Name = "DebugM"
         Me.DebugM.Size = New System.Drawing.Size(107, 21)
         Me.DebugM.TabIndex = 19
         Me.OptionsToolTip.SetToolTip(Me.DebugM, "Makes minecraft run in debug mode. This can help ")
+        Me.DebugM.Visible = False
         '
         'Memory
         '
@@ -185,11 +186,12 @@ Partial Class OptionsWindow
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Image = Global.Launcher.My.Resources.Resources.Debug
-        Me.Label5.Location = New System.Drawing.Point(2, 239)
+        Me.Label5.Location = New System.Drawing.Point(2, 265)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(130, 17)
         Me.Label5.TabIndex = 14
         Me.OptionsToolTip.SetToolTip(Me.Label5, "Makes minecraft run in debug mode. This can help " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "when looking for errors.")
+        Me.Label5.Visible = False
         '
         'Label4
         '
@@ -260,7 +262,7 @@ Partial Class OptionsWindow
         '
         'UserD_UUID
         '
-        Me.UserD_UUID.Location = New System.Drawing.Point(295, 267)
+        Me.UserD_UUID.Location = New System.Drawing.Point(295, 239)
         Me.UserD_UUID.Name = "UserD_UUID"
         Me.UserD_UUID.Size = New System.Drawing.Size(107, 20)
         Me.UserD_UUID.TabIndex = 26
@@ -268,7 +270,7 @@ Partial Class OptionsWindow
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 270)
+        Me.Label8.Location = New System.Drawing.Point(12, 242)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(102, 13)
         Me.Label8.TabIndex = 27
