@@ -78,12 +78,58 @@ Public Class UpdateLauncher
         If ProgressBar1.Value = 100 Then
             SW.Stop()
             'rename file
-            Try
-                My.Computer.FileSystem.RenameFile("launcher.exe", "launcher.old.exe")
-                My.Computer.FileSystem.RenameFile("TagAPI.dll", "TagAPI.old.dll")
-            Catch ex As Exception
 
+
+            Try
+
+                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Launcher.exe", "Launcher.old.exe")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
             End Try
+
+            Try
+
+                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "launcher.exe", "launcher.old.exe")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            Try
+
+                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Newtonsoft.Json.dll", "Newtonsoft.Json.old.dll")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+            Try
+
+                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "TagAPI.dll", "TagAPI.old.dll")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+
+            Try
+
+                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Ionic.Zip.dll", "Ionic.Zip.old.dll")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
+
+            Try
+
+                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Arguments\Launch.exe", "Launch.old.exe")
+
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+
             'moved to background worker.
             BackgroundWorker2.RunWorkerAsync()
 
