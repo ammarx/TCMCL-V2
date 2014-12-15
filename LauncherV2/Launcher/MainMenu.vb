@@ -136,7 +136,15 @@ Public Class MainMenu
     End Sub
 
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Try
+            Me.Text = "Minecraft Launcher " + Launcher_Version.Replace("version ", "")
+
+        Catch ex As Exception
+
+        End Try
+        
         Me.KeyPreview = True
+        
         BGWorker_News.RunWorkerAsync()
         UpdateLauncher.BGWorker_LookupUpdate.RunWorkerAsync()
 

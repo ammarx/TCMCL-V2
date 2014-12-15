@@ -300,6 +300,7 @@ Partial Class MainMenu
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(237, 17)
         Me.Label8.TabIndex = 27
+        Me.Label8.Visible = False
         '
         'Label9
         '
