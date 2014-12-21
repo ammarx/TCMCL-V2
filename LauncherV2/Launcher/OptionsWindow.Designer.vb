@@ -42,12 +42,12 @@ Partial Class OptionsWindow
         Me.Label7 = New System.Windows.Forms.Label()
         Me.RebuildOptions = New System.Windows.Forms.Button()
         Me.UserD_UUID = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CopyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -191,7 +191,7 @@ Partial Class OptionsWindow
         '
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Image = Global.Launcher.My.Resources.Resources.Debug
-        Me.Label5.Location = New System.Drawing.Point(2, 265)
+        Me.Label5.Location = New System.Drawing.Point(3, 265)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(130, 17)
         Me.Label5.TabIndex = 14
@@ -235,9 +235,9 @@ Partial Class OptionsWindow
         '
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Image = Global.Launcher.My.Resources.Resources.UUIDSkinMode
-        Me.Label7.Location = New System.Drawing.Point(5, 212)
+        Me.Label7.Location = New System.Drawing.Point(6, 212)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(147, 22)
+        Me.Label7.Size = New System.Drawing.Size(146, 22)
         Me.Label7.TabIndex = 25
         Me.OptionsToolTip.SetToolTip(Me.Label7, "Should allow you to see your own skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will increase upto 5 second" & _
         "s.")
@@ -263,28 +263,6 @@ Partial Class OptionsWindow
         Me.UserD_UUID.TabIndex = 26
         Me.OptionsToolTip.SetToolTip(Me.UserD_UUID, "Allows your to have someone elses skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can get UUID of users from: http://m" & _
         "cuuid.net/")
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 242)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(102, 13)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "User Defined UUID:"
-        Me.OptionsToolTip.SetToolTip(Me.Label8, "Allows your to have someone elses skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will remain same." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can" & _
-        " get UUID of users from: http://mcuuid.net/")
-        '
-        'Label3
-        '
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
-        Me.Label3.Location = New System.Drawing.Point(148, 36)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 30)
-        Me.Label3.TabIndex = 11
         '
         'ContextMenuStrip1
         '
@@ -312,6 +290,28 @@ Partial Class OptionsWindow
         Me.PasteToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
         Me.PasteToolStripMenuItem.Text = "Paste"
         '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Image = Global.Launcher.My.Resources.Resources.UUID_User
+        Me.Label9.Location = New System.Drawing.Point(8, 239)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(181, 22)
+        Me.Label9.TabIndex = 28
+        Me.OptionsToolTip.SetToolTip(Me.Label9, "Should allow you to see your own skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will increase upto 5 second" & _
+        "s.")
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Image = Global.Launcher.My.Resources.Resources.Options2
+        Me.Label3.Location = New System.Drawing.Point(148, 36)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(121, 30)
+        Me.Label3.TabIndex = 11
+        '
         'OptionsWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -319,7 +319,7 @@ Partial Class OptionsWindow
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.BackgroundImage = Global.Launcher.My.Resources.Resources.OptionsArea
         Me.ClientSize = New System.Drawing.Size(414, 466)
-        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.UserD_UUID)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.UUIDStatusBox)
@@ -367,9 +367,9 @@ Partial Class OptionsWindow
     Friend WithEvents UUIDStatusBox As System.Windows.Forms.ComboBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents UserD_UUID As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents CutToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CopyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PasteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

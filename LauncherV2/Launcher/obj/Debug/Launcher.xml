@@ -307,6 +307,10 @@ Launcher
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Launcher.My.Resources.Resources.UUID_User">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Launcher.My.Resources.Resources.UUIDSkinMode">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

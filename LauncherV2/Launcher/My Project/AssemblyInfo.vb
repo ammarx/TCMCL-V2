@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Launcher")> 
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("Minecraft Launcher")> 
 <Assembly: AssemblyCompany("TagCraftMC")> 
 <Assembly: AssemblyProduct("Launcher")> 
 <Assembly: AssemblyCopyright("Copyright TagCraftMC ©  2014")> 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.0.0.0")> 
-<Assembly: AssemblyFileVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.7.0.0")> 
+<Assembly: AssemblyFileVersion("1.7.0.0")> 

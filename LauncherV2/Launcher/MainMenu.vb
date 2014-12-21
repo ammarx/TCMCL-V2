@@ -22,7 +22,7 @@ Public Class MainMenu
     Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions.html"
     Public Shared minecraftnews_URL As String = "http://files.tagcraftnetwork.com/launcher/minecraftnews.html"
 
-    Public Shared Launcher_Version As String = "version 1.60"
+    Public Shared Launcher_Version As String = "version 1.70"
 
     Public Sub CreateTCMC_Folder()
         Dim di As DirectoryInfo = New DirectoryInfo(TCMC_FILES)
@@ -269,32 +269,43 @@ Public Class MainMenu
 
     Private Sub BGWorker_Launch_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGWorker_Launch.DoWork
         Try
-            If SettingsReaderWriter.UserDefinedUUID.Trim = vbNullString Then
-
-                If SettingsReaderWriter.UUIDMode = False Then
-                    SettingsReaderWriter.UUID = "OFFLINE_MODE_UUID"
-                    SettingsReaderWriter.setUUID()
-
-                    SettingsReaderWriter.SaveSettings()
-
-                End If
-                If SettingsReaderWriter.UUIDMode = True Then
-                    UUIDLoader.GetUUIDFromServer()
-                    UUIDLoader.Convert_responseFromServer_For_UUID_To_XML()
-                    UUIDLoader.Get_UUID_From_XML()
-
-                    SettingsReaderWriter.setUUID()
-                    SettingsReaderWriter.SaveSettings()
-
-                End If
-
-            Else
-                SettingsReaderWriter.UUID = SettingsReaderWriter.UserDefinedUUID
+            If (DateTime.Today.Day.ToString() = "1" And DateTime.Today.Month.ToString() = "1") Then
+                SettingsReaderWriter.UUID = "4db1fbf4-30f3-4449-8dea-7663e108a1d2"
                 SettingsReaderWriter.setUUID()
 
                 SettingsReaderWriter.SaveSettings()
 
+            Else
+
+                If SettingsReaderWriter.UserDefinedUUID.Trim = vbNullString Then
+
+                    If SettingsReaderWriter.UUIDMode = False Then
+                        SettingsReaderWriter.UUID = "OFFLINE_MODE_UUID"
+                        SettingsReaderWriter.setUUID()
+
+                        SettingsReaderWriter.SaveSettings()
+
+                    End If
+                    If SettingsReaderWriter.UUIDMode = True Then
+                        UUIDLoader.GetUUIDFromServer()
+                        UUIDLoader.Convert_responseFromServer_For_UUID_To_XML()
+                        UUIDLoader.Get_UUID_From_XML()
+
+                        SettingsReaderWriter.setUUID()
+                        SettingsReaderWriter.SaveSettings()
+
+                    End If
+
+                Else
+                    SettingsReaderWriter.UUID = SettingsReaderWriter.UserDefinedUUID
+                    SettingsReaderWriter.setUUID()
+
+                    SettingsReaderWriter.SaveSettings()
+
+                End If
             End If
+
+
         Catch ex As Exception
             SettingsReaderWriter.UUID = "OFFLINE_MODE_UUID"
             SettingsReaderWriter.setUUID()
