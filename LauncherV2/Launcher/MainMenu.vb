@@ -27,10 +27,14 @@ Public Class MainMenu
 
 
     Public Sub PopulateVersionSelector()
-        Dim di As New DirectoryInfo(versionsfolder)
-        For Each subdi As DirectoryInfo In di.GetDirectories
-            VersionSelector.Items.Add(subdi.Name)
-        Next
+        Try
+            Dim di As New DirectoryInfo(versionsfolder)
+            For Each subdi As DirectoryInfo In di.GetDirectories
+                VersionSelector.Items.Add(subdi.Name)
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 
