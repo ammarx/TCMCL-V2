@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuildArguments.vb" />
+    <Compile Include="CreateFolderFiles.vb" />
     <Compile Include="GameLoader.vb" />
     <Compile Include="CrashReader.Designer.vb">
       <DependentUpon>CrashReader.vb</DependentUpon>

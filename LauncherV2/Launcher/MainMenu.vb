@@ -22,104 +22,9 @@ Public Class MainMenu
     Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions.html"
     Public Shared minecraftnews_URL As String = "http://files.tagcraftnetwork.com/launcher/minecraftnews.html"
 
-    Public Shared Launcher_Version As String = "version 1.70"
+    Public Shared Launcher_Version As String = "version 1.7.1.0"
 
-    Public Sub CreateTCMC_Folder()
-        Dim di As DirectoryInfo = New DirectoryInfo(TCMC_FILES)
-        Try
-            If di.Exists Then
-                'MsgBox("That path exists already.")
-                Exit Sub
-            Else
-                di.Create()
-                'MsgBox("The directory was created successfully.")
-                Exit Sub
-            End If
 
-        Catch e As Exception
-            MsgBox("The process failed: {0}", e.ToString())
-        End Try
-    End Sub
-
-    Public Sub CreateTCMC_Folder_Arguments()
-        Dim di As DirectoryInfo = New DirectoryInfo(TCMC_FILES + "Arguments/")
-        Try
-            If di.Exists Then
-                'MsgBox("That path exists already.")
-                Exit Sub
-            Else
-                di.Create()
-                'MsgBox("The directory was created successfully.")
-                Exit Sub
-            End If
-
-        Catch e As Exception
-            MsgBox("The process failed: {0}", e.ToString())
-        End Try
-    End Sub
-
-    Public Sub CreateTCMC_Folder_Arguments_logs()
-        Dim di As DirectoryInfo = New DirectoryInfo(TCMC_FILES + "Arguments/logs/")
-        Try
-            If di.Exists Then
-                'MsgBox("That path exists already.")
-                Exit Sub
-            Else
-                di.Create()
-                'MsgBox("The directory was created successfully.")
-                Exit Sub
-            End If
-
-        Catch e As Exception
-            MsgBox("The process failed: {0}", e.ToString())
-        End Try
-    End Sub
-
-    Public Sub CreateTCMC_Folder_Settings()
-        Dim di As DirectoryInfo = New DirectoryInfo(TCMC_FILES + "Settings/")
-        Try
-            If di.Exists Then
-                'MsgBox("That path exists already.")
-                Exit Sub
-            Else
-                di.Create()
-                'MsgBox("The directory was created successfully.")
-                Exit Sub
-            End If
-
-        Catch e As Exception
-            MsgBox("The process failed: {0}", e.ToString())
-        End Try
-    End Sub
-
-    Public Sub CreateTCMC_Folder_Settings_versions()
-        Dim di As DirectoryInfo = New DirectoryInfo(TCMC_FILES + "Settings/versions/")
-        Try
-            If di.Exists Then
-                'MsgBox("That path exists already.")
-                Exit Sub
-            Else
-                di.Create()
-                'MsgBox("The directory was created successfully.")
-                Exit Sub
-            End If
-
-        Catch e As Exception
-            MsgBox("The process failed: {0}", e.ToString())
-        End Try
-    End Sub
-
-    Public Sub CreateTCMC_File_Arguments()
-        Dim file As System.IO.FileStream
-        file = System.IO.File.Create(TCMC_FILES + "Arguments/Arguments.txt")
-
-    End Sub
-
-    Public Sub CreateTCMC_File_Arguments_launch()
-        Dim file As System.IO.FileStream
-        file = System.IO.File.Create(TCMC_FILES + "Arguments/Arguments_launch.txt")
-
-    End Sub
 
     Public Sub PopulateVersionSelector()
         Dim di As New DirectoryInfo(versionsfolder)
@@ -174,13 +79,13 @@ Public Class MainMenu
         Counter_Advert_Loader()
 
         'Create folders... failsafe.
-        CreateTCMC_Folder()
-        CreateTCMC_Folder_Arguments()
-        CreateTCMC_Folder_Arguments_logs()
+        CreateFolderFiles.CreateTCMC_Folder()
+        CreateFolderFiles.CreateTCMC_Folder_Arguments()
+        CreateFolderFiles.CreateTCMC_Folder_Arguments_logs()
         'CreateTCMC_Folder_Settings()
         'CreateTCMC_Folder_Settings_versions()
-        CreateTCMC_File_Arguments()
-        CreateTCMC_File_Arguments_launch()
+        CreateFolderFiles.CreateTCMC_File_Arguments()
+        CreateFolderFiles.CreateTCMC_File_Arguments_launch()
 
     End Sub
 
@@ -194,13 +99,13 @@ Public Class MainMenu
     Public Sub Start_Launch()
 
         'Create folders... failsafe.
-        CreateTCMC_Folder()
-        CreateTCMC_Folder_Arguments()
-        CreateTCMC_Folder_Arguments_logs()
+        CreateFolderFiles.CreateTCMC_Folder()
+        CreateFolderFiles.CreateTCMC_Folder_Arguments()
+        CreateFolderFiles.CreateTCMC_Folder_Arguments_logs()
         'CreateTCMC_Folder_Settings()
         'CreateTCMC_Folder_Settings_versions()
-        CreateTCMC_File_Arguments()
-        CreateTCMC_File_Arguments_launch()
+        CreateFolderFiles.CreateTCMC_File_Arguments()
+        CreateFolderFiles.CreateTCMC_File_Arguments_launch()
 
         If Username.Text = "" Then
             MessageBox.Show("To launch Minecraft you must select a player name you wish to play with.", "Please select a Player Name", MessageBoxButtons.OK, MessageBoxIcon.Information)
