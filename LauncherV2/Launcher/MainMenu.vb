@@ -22,9 +22,7 @@ Public Class MainMenu
     Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions.html"
     Public Shared minecraftnews_URL As String = "http://files.tagcraftnetwork.com/launcher/minecraftnews.html"
 
-    Public Shared Launcher_Version As String = "version 1.7.1.0"
-
-
+    Public Shared Launcher_Version As String = "version 1.70"
 
     Public Sub PopulateVersionSelector()
         Try
@@ -366,7 +364,7 @@ Public Class MainMenu
 
     End Sub
 
-    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+    Private Sub Remember_Me_Label_Click(sender As Object, e As EventArgs) Handles Remember_Me_Label.Click
         If RememberMe.Checked = True Then
             RememberMe.Checked = False
         ElseIf RememberMe.Checked = False Then

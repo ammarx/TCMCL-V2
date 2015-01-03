@@ -36,7 +36,7 @@ Partial Class MainMenu
         Me.LauncherToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.Website = New System.Windows.Forms.Button()
         Me.VersionSelector = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Remember_Me_Label = New System.Windows.Forms.Label()
         Me.MCUpdates = New System.Windows.Forms.Button()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -180,15 +180,15 @@ Partial Class MainMenu
         Me.VersionSelector.TabIndex = 24
         Me.LauncherToolTip.SetToolTip(Me.VersionSelector, "Choose a version to run.")
         '
-        'Label7
+        'Remember_Me_Label
         '
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Image = Global.Launcher.My.Resources.Resources.RememberName
-        Me.Label7.Location = New System.Drawing.Point(283, 375)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(207, 17)
-        Me.Label7.TabIndex = 26
-        Me.LauncherToolTip.SetToolTip(Me.Label7, "Remember your player name.")
+        Me.Remember_Me_Label.BackColor = System.Drawing.Color.Transparent
+        Me.Remember_Me_Label.Image = Global.Launcher.My.Resources.Resources.RememberName
+        Me.Remember_Me_Label.Location = New System.Drawing.Point(283, 375)
+        Me.Remember_Me_Label.Name = "Remember_Me_Label"
+        Me.Remember_Me_Label.Size = New System.Drawing.Size(207, 17)
+        Me.Remember_Me_Label.TabIndex = 26
+        Me.LauncherToolTip.SetToolTip(Me.Remember_Me_Label, "Remember your player name.")
         '
         'MCUpdates
         '
@@ -373,7 +373,7 @@ Partial Class MainMenu
         Me.Controls.Add(Me.Username)
         Me.Controls.Add(Me.Launch)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Remember_Me_Label)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -408,7 +408,7 @@ Partial Class MainMenu
     Friend WithEvents RememberMe As System.Windows.Forms.CheckBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents VersionSelector As System.Windows.Forms.ComboBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Remember_Me_Label As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents MCUpdates As System.Windows.Forms.Button
     Friend WithEvents TransparentRichTextBox2 As Launcher.TransparentRichTextBox
