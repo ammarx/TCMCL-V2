@@ -282,7 +282,7 @@ Public Class OptionsWindow
             ReadMCOptions()
 
         Catch ex As Exception
-            MsgBox("Error reading options.")
+            MsgBox("Error reading options.txt")
         End Try
         DisableMemoryFor32Bit()
 

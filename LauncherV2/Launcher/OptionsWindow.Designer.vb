@@ -235,7 +235,7 @@ Partial Class OptionsWindow
         '
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Image = Global.Launcher.My.Resources.Resources.UUIDSkinMode
-        Me.Label7.Location = New System.Drawing.Point(6, 212)
+        Me.Label7.Location = New System.Drawing.Point(6, 213)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(146, 22)
         Me.Label7.TabIndex = 25
@@ -251,7 +251,7 @@ Partial Class OptionsWindow
         Me.RebuildOptions.Name = "RebuildOptions"
         Me.RebuildOptions.Size = New System.Drawing.Size(196, 40)
         Me.RebuildOptions.TabIndex = 22
-        Me.OptionsToolTip.SetToolTip(Me.RebuildOptions, "Allows you to rebuild broken Options")
+        Me.OptionsToolTip.SetToolTip(Me.RebuildOptions, "Allows you to rebuild broken Options.")
         Me.RebuildOptions.UseVisualStyleBackColor = True
         '
         'UserD_UUID
@@ -298,8 +298,8 @@ Partial Class OptionsWindow
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(181, 22)
         Me.Label9.TabIndex = 28
-        Me.OptionsToolTip.SetToolTip(Me.Label9, "Should allow you to see your own skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Start up time will increase upto 5 second" & _
-        "s.")
+        Me.OptionsToolTip.SetToolTip(Me.Label9, "Allows your to have someone elses skin." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "You can get UUID of users from: http://m" & _
+        "cuuid.net/")
         '
         'Label3
         '
