@@ -17,6 +17,8 @@ Public Class MainMenu
 
     Public Shared responseFromServer_For_UUID As String
     Public Shared XML_UUID As String
+    Public Shared inheritsFrom As Boolean = False
+    Public Shared inheritsFrom_Value As String
 
     Public Shared MojangUUID_API_URL As String = "https://api.mojang.com/profiles/minecraft"
     Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions.html"
@@ -220,9 +222,44 @@ Public Class MainMenu
             SettingsReaderWriter.SaveSettings()
 
         End Try
-        TagAPIx.Class1.optionreader(SettingsReaderWriter.versionnumber)
-        TagAPIx.Class1.main()
-        TagAPIx.Class1.extractfile()
+        inheritsFromCheck.getINHstatus()
+
+        Dim oldversionnumber As String = SettingsReaderWriter.versionnumber
+        Dim newversionnumber As String = ""
+
+        If (inheritsFrom = False) Then
+            TagAPIx.Class1.isItinh(False)
+            TagAPIx.Class1.optionreader(SettingsReaderWriter.versionnumber)
+            TagAPIx.Class1.main()
+            TagAPIx.Class1.extractfile()
+        End If
+
+        If (inheritsFrom = True) Then
+            SettingsReaderWriter.versionnumber = inheritsFrom_Value
+            SettingsReaderWriter.SaveSettings()
+
+            TagAPIx.Class1.isItinh(True)
+            TagAPIx.Class1.optionreader(SettingsReaderWriter.versionnumber)
+            TagAPIx.Class1.main()
+            TagAPIx.Class1.extractfile()
+
+            'recall this again to build regular arguments..
+            newversionnumber = SettingsReaderWriter.versionnumber
+            'MsgBox(newversionnumber.ToString)
+            SettingsReaderWriter.versionnumber = oldversionnumber
+            SettingsReaderWriter.SaveSettings()
+
+            TagAPIx.Class1.isItinh(False)
+            TagAPIx.Class1.optionreader(SettingsReaderWriter.versionnumber)
+            TagAPIx.Class1.main()
+            'TagAPIx.Class1.extractfile()
+            ' make sure you copy the files to the correct location.
+            My.Computer.FileSystem.CopyDirectory(MainMenu.versionsfolder + "\" + newversionnumber + "\" + newversionnumber + "_TagCraftMC", MainMenu.versionsfolder + "\" + SettingsReaderWriter.versionnumber + "\" + SettingsReaderWriter.versionnumber + "_TagCraftMC", True)
+
+            ' after this copy text of both txt files together and we are good to go..
+        End If
+
+
         Try
             FinalArgumentBuilder()
             WriteArgumentToText()

@@ -96,6 +96,7 @@
     <Compile Include="CrashReader.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="inheritsFromCheck.vb" />
     <Compile Include="NewsLoader.vb" />
     <Compile Include="OldFile.vb" />
     <Compile Include="ResourcesDownloader.Designer.vb">
