@@ -7,6 +7,8 @@ Public Class MainMenu
 
     Public Shared versionsfolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions"
     Public Shared options_txt As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt"
+
+    Public Shared pre_arguments_txt As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Arguments/Pre-Arguments.txt"
     Public Shared arguments_txt As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Arguments/Arguments.txt"
     Public Shared arguments_launch_txt As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/TagCraftMC Files/Arguments/Arguments_launch.txt"
     Public Shared crashreportfolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/crash-reports"
@@ -259,6 +261,34 @@ Public Class MainMenu
             ' after this copy text of both txt files together and we are good to go..
         End If
 
+        Try
+            'VbCrLf
+            Dim line1 As String = ""
+            Dim line2 As String = ""
+            Dim linefinal As String = ""
+
+            Using sr As StreamReader = File.OpenText(pre_arguments_txt)
+
+                line1 = sr.ReadLine()
+
+            End Using
+
+
+            Using sr As StreamReader = File.OpenText(arguments_txt)
+
+                line2 = sr.ReadLine()
+
+            End Using
+
+            Dim objWriter As New System.IO.StreamWriter(arguments_txt)
+
+            objWriter.Write(line1 + line2)
+            objWriter.Close()
+
+
+        Catch ex As Exception
+
+        End Try
 
         Try
             FinalArgumentBuilder()
