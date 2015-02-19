@@ -99,4 +99,10 @@ Public Class CreateFolderFiles
 
     End Sub
 
+    Public Shared Sub CreateTCMC_File_Pre_Arguments()
+        Dim file As System.IO.FileStream
+        file = System.IO.File.Create(MainMenu.TCMC_FILES + "Arguments/Pre-Arguments.txt")
+
+    End Sub
+
 End Class

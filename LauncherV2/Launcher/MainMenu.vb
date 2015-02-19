@@ -92,6 +92,7 @@ Public Class MainMenu
         'CreateTCMC_Folder_Settings_versions()
         CreateFolderFiles.CreateTCMC_File_Arguments()
         CreateFolderFiles.CreateTCMC_File_Arguments_launch()
+        CreateFolderFiles.CreateTCMC_File_Pre_Arguments()
 
     End Sub
 
@@ -256,39 +257,47 @@ Public Class MainMenu
             TagAPIx.Class1.main()
             'TagAPIx.Class1.extractfile()
             ' make sure you copy the files to the correct location.
-            My.Computer.FileSystem.CopyDirectory(MainMenu.versionsfolder + "\" + newversionnumber + "\" + newversionnumber + "_TagCraftMC", MainMenu.versionsfolder + "\" + SettingsReaderWriter.versionnumber + "\" + SettingsReaderWriter.versionnumber + "_TagCraftMC", True)
+            Try
+                My.Computer.FileSystem.CopyDirectory(MainMenu.versionsfolder + "\" + newversionnumber + "\" + newversionnumber + "_TagCraftMC", MainMenu.versionsfolder + "\" + SettingsReaderWriter.versionnumber + "\" + SettingsReaderWriter.versionnumber + "_TagCraftMC", True)
 
+            Catch ex As Exception
+
+            End Try
+            
             ' after this copy text of both txt files together and we are good to go..
+
+
+            Try
+                'VbCrLf
+                Dim line1 As String = ""
+                Dim line2 As String = ""
+                Dim linefinal As String = ""
+
+                Using sr As StreamReader = File.OpenText(pre_arguments_txt)
+
+                    line1 = sr.ReadLine()
+
+                End Using
+
+
+                Using sr As StreamReader = File.OpenText(arguments_txt)
+
+                    line2 = sr.ReadLine()
+
+                End Using
+
+                Dim objWriter As New System.IO.StreamWriter(arguments_txt)
+
+                objWriter.Write(line1 + line2)
+                objWriter.Close()
+
+
+            Catch ex As Exception
+
+            End Try
+
         End If
 
-        Try
-            'VbCrLf
-            Dim line1 As String = ""
-            Dim line2 As String = ""
-            Dim linefinal As String = ""
-
-            Using sr As StreamReader = File.OpenText(pre_arguments_txt)
-
-                line1 = sr.ReadLine()
-
-            End Using
-
-
-            Using sr As StreamReader = File.OpenText(arguments_txt)
-
-                line2 = sr.ReadLine()
-
-            End Using
-
-            Dim objWriter As New System.IO.StreamWriter(arguments_txt)
-
-            objWriter.Write(line1 + line2)
-            objWriter.Close()
-
-
-        Catch ex As Exception
-
-        End Try
 
         Try
             FinalArgumentBuilder()
