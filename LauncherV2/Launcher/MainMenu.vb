@@ -26,7 +26,7 @@ Public Class MainMenu
     Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions.html"
     Public Shared minecraftnews_URL As String = "http://files.tagcraftnetwork.com/launcher/minecraftnews.html"
 
-    Public Shared Launcher_Version As String = "version 1.70"
+    Public Shared Launcher_Version As String = "version 1.75"
 
     Public Sub PopulateVersionSelector()
         Try
