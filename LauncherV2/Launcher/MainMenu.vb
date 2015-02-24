@@ -23,10 +23,10 @@ Public Class MainMenu
     Public Shared inheritsFrom_Value As String
 
     Public Shared MojangUUID_API_URL As String = "https://api.mojang.com/profiles/minecraft"
-    Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions.html"
+    Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions_new.html"
     Public Shared minecraftnews_URL As String = "http://files.tagcraftnetwork.com/launcher/minecraftnews.html"
 
-    Public Shared Launcher_Version As String = "version 1.75"
+    Public Shared Launcher_Version As String = "version 1.80"
 
     Public Sub PopulateVersionSelector()
         Try

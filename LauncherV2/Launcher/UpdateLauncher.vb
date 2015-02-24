@@ -52,7 +52,7 @@ Public Class UpdateLauncher
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             MainMenu.Enabled = False
-            WC.DownloadFileAsync(New Uri("http://files.tagcraftnetwork.com/launcher/client/latest.zip"), "ClientUpdate.zip")
+            WC.DownloadFileAsync(New Uri("http://files.tagcraftnetwork.com/launcher/client/latest_new.zip"), "ClientUpdate.zip")
             ProgressBar1.Visible = True
             Button1.Enabled = False
             Button2.Enabled = False
@@ -80,7 +80,6 @@ Public Class UpdateLauncher
             SW.Stop()
             'rename file
 
-
             Try
 
                 My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Launcher.exe", "Launcher.old.exe")
@@ -99,29 +98,11 @@ Public Class UpdateLauncher
 
             Try
 
-                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Newtonsoft.Json.dll", "Newtonsoft.Json.old.dll")
-
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-
-            Try
-
                 My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "TagAPI.dll", "TagAPI.old.dll")
 
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
-
-
-            Try
-
-                My.Computer.FileSystem.RenameFile(MainMenu.dot_minecraft + "Ionic.Zip.dll", "Ionic.Zip.old.dll")
-
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-
 
             Try
 
@@ -191,7 +172,7 @@ Public Class UpdateLauncher
 
         Else
             Try
-                URL = "http://files.tagcraftnetwork.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime()
+                URL = "http://files.tagcraftnetwork.com/launcher/clientversions_new.html?t=" + DateTime.Now.ToLocalTime()
                 result = (LCase(client.DownloadString(URL)))
                 'Debug.Print("DEBUG CHECK STRING DOWNLOAD: {0}", result)
                 If (LCase(MainMenu.Launcher_Version) = result) Then 'lower case it all incase I am drunk and do VeRsIoN 9001
@@ -218,7 +199,7 @@ Public Class UpdateLauncher
     End Sub
 
     Private Function InternetConnection() As Boolean
-        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.tagcraftnetwork.com/launcher/clientversions.html?t=" + DateTime.Now.ToLocalTime())
+        Dim req As System.Net.WebRequest = System.Net.WebRequest.Create("http://files.tagcraftnetwork.com/launcher/clientversions_new.html?t=" + DateTime.Now.ToLocalTime())
         Dim resp As System.Net.WebResponse
         Try
             resp = req.GetResponse()

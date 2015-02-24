@@ -74,3 +74,7 @@ C:\Users\User\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.U
 C:\Users\User\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.Resources.resources
 C:\Users\User\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.MCUpdateDownloader.resources
 C:\Users\User\Documents\GitHub\TCMCL-V2\LauncherV2\Launcher\obj\Debug\Launcher.vbproj.GenerateResource.Cache
+C:\Users\User\AppData\Roaming\.minecraft\Launcher.exe.config
+C:\Users\User\AppData\Roaming\.minecraft\Launcher.exe
+C:\Users\User\AppData\Roaming\.minecraft\Launcher.pdb
+C:\Users\User\AppData\Roaming\.minecraft\Launcher.xml
