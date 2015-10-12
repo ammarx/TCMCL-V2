@@ -1,9 +1,12 @@
 ﻿Imports System.IO
+Imports System.Reflection
 
 Public Class MainMenu
     Public Shared assetsDir As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assets"
     Public Shared assetsDirLegacy As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/assets\virtual\legacy"
     Public Shared dot_minecraft As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/"
+
+    Public Shared dot_minecraft_startup_path As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\.minecraft"
 
     Public Shared versionsfolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/versions"
     Public Shared options_txt As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/.minecraft/options.txt"
@@ -46,16 +49,31 @@ Public Class MainMenu
         End If
     End Sub
 
+    Public Sub CheckStartUpLocation()
+        If (Application.StartupPath = dot_minecraft_startup_path) Then
+            'dont exit..
+           
+        Else
+            'error and exit..
+            MsgBox("Unable to start the launcher! Startup location is not .minecraft", MsgBoxStyle.Critical, "Startup location error")
+            End
+
+        End If
+
+    End Sub
+
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
+        CheckStartUpLocation()
+
         Try
             Me.Text = "Minecraft Launcher " + Launcher_Version.Replace("version ", "")
 
         Catch ex As Exception
 
         End Try
-        
+
         Me.KeyPreview = True
-        
+
         BGWorker_News.RunWorkerAsync()
         UpdateLauncher.BGWorker_LookupUpdate.RunWorkerAsync()
 
@@ -156,7 +174,7 @@ Public Class MainMenu
 
     Private Sub Launch_Click(sender As Object, e As EventArgs) Handles Launch.Click
         Start_Launch()
-       
+
     End Sub
 
     Private Sub Options_Click(sender As Object, e As EventArgs) Handles Options.Click
@@ -263,7 +281,7 @@ Public Class MainMenu
             Catch ex As Exception
 
             End Try
-            
+
             ' after this copy text of both txt files together and we are good to go..
 
 
@@ -363,7 +381,7 @@ Public Class MainMenu
         Catch ex As Exception
             TransparentRichTextBox2.Text = "Unable to get the news, sorry"
 
-        End Try        
+        End Try
     End Sub
 
     Private Sub BGWorker_Launch_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BGWorker_Launch.RunWorkerCompleted
