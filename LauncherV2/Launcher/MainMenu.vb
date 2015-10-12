@@ -353,12 +353,17 @@ Public Class MainMenu
     End Sub
 
     Private Sub BGWorker_News_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BGWorker_News.RunWorkerCompleted
-        If NewsLoader.UpdateNoNet = True Then
-            TransparentRichTextBox2.Text = "Unable to get the news, sorry"
-        Else
-            TransparentRichTextBox2.Rtf = NewsLoader.UpdatesInfoResult
-        End If
+        Try
+            If NewsLoader.UpdateNoNet = True Then
+                TransparentRichTextBox2.Text = "Unable to get the news, sorry"
+            Else
+                TransparentRichTextBox2.Rtf = NewsLoader.UpdatesInfoResult
+            End If
 
+        Catch ex As Exception
+            TransparentRichTextBox2.Text = "Unable to get the news, sorry"
+
+        End Try        
     End Sub
 
     Private Sub BGWorker_Launch_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BGWorker_Launch.RunWorkerCompleted

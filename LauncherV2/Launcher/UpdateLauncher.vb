@@ -181,10 +181,13 @@ Public Class UpdateLauncher
                     LauncherVersion = True
                     'Debug.Print("Worked")
                 Else
-                    Show_Window = True
+                    If result.Contains("Version") Then
+                        Show_Window = True
 
-                    LauncherVersion = False
-                    'Debug.Print("Failed")
+                        LauncherVersion = False
+                        'Debug.Print("Failed")
+
+                    End If
                 End If
 
             Catch ex As Exception
