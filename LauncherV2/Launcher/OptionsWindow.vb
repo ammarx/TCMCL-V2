@@ -303,7 +303,7 @@ Public Class OptionsWindow
     Private Sub RebuildOptions_Click(sender As Object, e As EventArgs) Handles RebuildOptions.Click
         Try
             SettingsReaderWriter.ResetSettings()
-            MsgBox("Launcher closing... Please restart.")
+            MsgBox("Launcher closing... Please restart.", MsgBoxStyle.Information)
             MainMenu.Dispose()
 
         Catch ex As Exception

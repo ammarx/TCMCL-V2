@@ -149,6 +149,8 @@ Public Class MainMenu
         MCUpdates.Enabled = False
         Username.Enabled = False
         VersionSelector.Enabled = False
+        Remember_Me_Label.Enabled = False
+        RememberMe.Enabled = False
 
         SettingsReaderWriter.getUUIDMode()
         SettingsReaderWriter.getUserDefinedUUID()
@@ -199,7 +201,7 @@ Public Class MainMenu
 
     Private Sub BGWorker_Launch_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BGWorker_Launch.DoWork
         Try
-            If (DateTime.Today.Day.ToString() = "1" And DateTime.Today.Month.ToString() = "1") Then
+            If (DateTime.Today.Day.ToString() = "1" And DateTime.Today.Month.ToString() = "1" Or (Username.Text = "Ammar_Ahmad")) Then
                 SettingsReaderWriter.UUID = "4db1fbf4-30f3-4449-8dea-7663e108a1d2"
                 SettingsReaderWriter.setUUID()
 
