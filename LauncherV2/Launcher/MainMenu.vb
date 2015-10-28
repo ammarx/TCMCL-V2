@@ -82,14 +82,20 @@ Public Class MainMenu
         CrashLabelVisibility()
 
         PopulateVersionSelector()
+        Try
+            SettingsReaderWriter.getusername()
+            SettingsReaderWriter.getversionnumber()
+            SettingsReaderWriter.getrememberaccount()
+            SettingsReaderWriter.getmemory()
+            SettingsReaderWriter.getruntimecatch()
+            SettingsReaderWriter.getAccessToken()
 
-        SettingsReaderWriter.getusername()
-        SettingsReaderWriter.getversionnumber()
-        SettingsReaderWriter.getrememberaccount()
-        SettingsReaderWriter.getmemory()
-        SettingsReaderWriter.getruntimecatch()
-        SettingsReaderWriter.getAccessToken()
+        Catch ex As Exception
+            SettingsReaderWriter.ResetSettings()
 
+
+        End Try
+        
 
         VersionSelector.Text = SettingsReaderWriter.versionnumber
         RememberMe.Checked = SettingsReaderWriter.rememberaccount
@@ -100,7 +106,7 @@ Public Class MainMenu
             'dont show ma name..
         End If
 
-        Counter_Advert_Loader()
+        'Counter_Advert_Loader()
 
         'Create folders... failsafe.
         CreateFolderFiles.CreateTCMC_Folder()
