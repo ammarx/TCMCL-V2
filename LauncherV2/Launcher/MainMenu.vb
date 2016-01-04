@@ -29,7 +29,13 @@ Public Class MainMenu
     Public Shared clientversions_URL As String = "http://files.tagcraftnetwork.com/launcher/clientversions_new.html"
     Public Shared minecraftnews_URL As String = "http://files.tagcraftnetwork.com/launcher/minecraftnews.html"
 
-    Public Shared Launcher_Version As String = "version 1.80"
+    Public Shared Launcher_Version As String = "version 1.90"
+
+    Public Sub MakeServer_Resource_Packs()
+        If (Not System.IO.Directory.Exists(dot_minecraft + "server-resource-packs")) Then
+            System.IO.Directory.CreateDirectory(dot_minecraft + "server-resource-packs")
+        End If
+    End Sub
 
     Public Sub PopulateVersionSelector()
         Try
@@ -52,7 +58,7 @@ Public Class MainMenu
     Public Sub CheckStartUpLocation()
         If (Application.StartupPath = dot_minecraft_startup_path) Then
             'dont exit..
-           
+
         Else
             'error and exit..
             MsgBox("Unable to start the launcher! Startup location is not .minecraft", MsgBoxStyle.Critical, "Startup location error")
@@ -64,6 +70,7 @@ Public Class MainMenu
 
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles Me.Load
         CheckStartUpLocation()
+        MakeServer_Resource_Packs()
 
         Try
             Me.Text = "Minecraft Launcher " + Launcher_Version.Replace("version ", "")
@@ -95,7 +102,7 @@ Public Class MainMenu
 
 
         End Try
-        
+
 
         VersionSelector.Text = SettingsReaderWriter.versionnumber
         RememberMe.Checked = SettingsReaderWriter.rememberaccount

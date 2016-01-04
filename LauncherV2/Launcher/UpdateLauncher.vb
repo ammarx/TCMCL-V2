@@ -181,7 +181,7 @@ Public Class UpdateLauncher
                     LauncherVersion = True
                     'Debug.Print("Worked")
                 Else
-                    If result.Contains("Version") Then
+                    If result.Contains("Version") Or result.Contains("version") Then
                         Show_Window = True
 
                         LauncherVersion = False
